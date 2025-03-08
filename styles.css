@@ -643,39 +643,142 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: none; /* Esconde os links do menu */
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  #hero {
+    height: 100vh;
+    background: url("frente.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .hero-content {
+    color: white;
+    max-width: 800px;
   }
   
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #e5fdab;
   }
   
-  .feature-grid {
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #ffffc4;
+  }
+  
+  .hero-content .partner-text {
+    color: #2ec91c;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 0.5rem 0.5rem;
+    background: linear-gradient(#e5fdab,#cbfb92,#b1f978);
+    color: #2ec91c;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  
+  .buttonGaleria {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #b1f978;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    position: relative;
+    left: 1px;
+  }
+
+  .buttonEnviar {
+    display: inline-block;
+    padding: 1rem 4rem;
+    background: var(--secondary-color);
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact {
+    padding: 1rem 1rem;
+    background-color: var(--background-color);
+  }
+  
+  .contact h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .contact-container {
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 1rem auto;
+    width: 100%;
   }
   
-  .service-list {
-    grid-template-columns: 1fr;
+  .contact-info {
+    background-color: #ceffb3;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(5px);
+    font-size: 0.8rem;
   }
   
-  .installations-list {
-    grid-template-columns: 1fr;
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
   }
   
-  .products-grid {
-    grid-template-columns: 1fr;
+  .contact-item i {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin: 0;
   }
   
-  .installations-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  .contact-item a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .contact-item a:hover {
+    color: var(--primary-color);
   }
 }
 
-@media (max-width: 480px) {
-  .installations-gallery {
-    grid-template-columns: 1fr;
-  }
-}
+/* Hero Section */
