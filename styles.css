@@ -809,7 +809,7 @@ footer {
   .produto {
     display: inline-block;
     margin: 4px;
-    margin-left: 10px;
+    margin-left: 20px;
     padding: 1rem 2rem;
     background: linear-gradient(#e5fdab,#cbfb92,#b1f978);
     color: #2ec91c;
